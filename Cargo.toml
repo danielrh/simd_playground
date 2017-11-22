@@ -1,0 +1,25 @@
+[package]
+name = "simd_playground"
+version = "0.0.1"
+authors = [
+    "Daniel Reiter Horn <danielrh@dropbox.com>"
+]
+license = "BSD-3-Clause/MIT or Apache"
+documentation = "tbd"
+keywords = ["brotli", "decompression", "lz77", "huffman", "nostd"]
+readme = "README.md"
+
+
+[[bin]]
+doc = false
+name = "simd_playground"
+
+[profile.release]
+lto=false
+
+[build-dependencies]
+vergen = "0.1"
+
+[dependencies]
+"stdsimd" = ">= 0.0.3"
+
