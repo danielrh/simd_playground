@@ -1,25 +1,22 @@
 [package]
-name = "simd_playground"
+name = "simdtest"
 version = "0.0.1"
 authors = [
-    "Daniel Reiter Horn <danielrh@dropbox.com>"
+    "Daniel Reiter Horn <danielrh@dropbox.com>",
+    "Jongmin Baek <jongmin@dropbox.com>",
 ]
 license = "BSD-3-Clause/MIT or Apache"
 documentation = "tbd"
 keywords = ["brotli", "decompression", "lz77", "huffman", "nostd"]
 readme = "README.md"
 
-
-[[bin]]
-doc = false
-name = "simd_playground"
+[lib]
+crate-type=["cdylib", "rlib", "staticlib"]
 
 [profile.release]
-lto=false
+lto=true
 
 [build-dependencies]
 vergen = "0.1"
 
-[dependencies]
-"stdsimd" = ">= 0.0.3"
 
